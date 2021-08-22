@@ -1,0 +1,51 @@
+:root {
+  --header-height: 4em;
+  --footer-height: 2em;
+}
+
+html {
+	height: 100vh;
+	width: 100%;
+}
+
+* {
+	margin: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	box-sizing: inherit;
+	height: 100%;
+	width: 100%;
+	border: 3px solid red;
+
+}
+
+header {
+	width: 100%;
+	height: var(--header-height);
+	border: 3px solid green;
+}
+
+main {
+	width: 100%;
+	height: calc(100% - var(--header-height) - var(--footer-height));
+	border: 3px solid blue;
+	overflow: auto;
+}
+
+footer {
+	height: var(--footer-height);
+	border: 3px solid orange;
+}
+
+.app {
+	width: 100%;
+	height: 100%;
+	background-color: grey;
+	display: grid;
+	grid-template-columns: 200px auto;
+}
